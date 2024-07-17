@@ -58,16 +58,18 @@ async function getData({ endpoint, limit = 1, id = null }) {
 	}
 }
 
-async function getImageUrl(id) {
-	const defaults = 'full/843,/0/default.jpg';
-	return await fetch(`${iiifUrl}/${id}/${defaults}`);
+function getImageUrl(id) {
+	const defaults = 'full/400,/0/default.jpg';
+	return `${iiifUrl}/${id}/${defaults}`;
 }
 
 export async function getArtwork() {
 	const endpoint = 'artworks';
-	const { data } = await getData({ endpoint });
-	const urls = [await getImageUrl(data[0].image_id)];
-	return { urls, title: data[0].title };
+	const {
+		data: [{ image_id, title }]
+	} = await getData({ endpoint });
+	const urls = [await getImageUrl(image_id)];
+	return { urls, title };
 }
 
 // grabs exhibition at random-ish,
@@ -84,7 +86,7 @@ export async function getExhibition() {
 		urls.push(subJson.data.image_url);
 	} else {
 		urls.push(await getImageUrl(imageId));
-		subJson.data.alt_image_ids.forEach(async altId => {
+		subJson.data.alt_image_ids.slice(0, 5).forEach(async altId => {
 			urls.push(await getImageUrl(altId));
 		});
 	}

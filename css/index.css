@@ -1,3 +1,30 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    font-size: 109%;
+    background-color: black;
+    color:azure;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+    margin-bottom: .2rem;
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.imgs img {
+    margin-top: 1rem;
+    max-width: 50rem;
+    max-height: 50rem;
+    border: .1rem solid;
+}
