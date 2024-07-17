@@ -68,7 +68,7 @@ export async function getArtwork() {
 	const {
 		data: [{ image_id, title }]
 	} = await getData({ endpoint });
-	const urls = [await getImageUrl(image_id)];
+	const urls = [getImageUrl(image_id)];
 	return { urls, title };
 }
 
@@ -85,9 +85,9 @@ export async function getExhibition() {
 	if (imageId === null) {
 		urls.push(subJson.data.image_url);
 	} else {
-		urls.push(await getImageUrl(imageId));
+		urls.push(getImageUrl(imageId));
 		subJson.data.alt_image_ids.slice(0, 5).forEach(async altId => {
-			urls.push(await getImageUrl(altId));
+			urls.push(getImageUrl(altId));
 		});
 	}
 	return { urls, title };
