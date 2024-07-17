@@ -2,9 +2,10 @@ import Image from './Image.js';
 
 const imgDiv = document.querySelector('.imgs');
 
+const ctaHeight = document.querySelector('.cta').getBoundingClientRect().height;
 const isViewFull = () => {
-	const height = imgDiv.getBoundingClientRect().height;
-	return height / window.innerHeight > 0.9;
+	const currHeight = imgDiv.getBoundingClientRect().height;
+	return ctaHeight + currHeight >= window.innerHeight;
 };
 
 export default class Button {

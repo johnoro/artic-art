@@ -8,11 +8,21 @@ body {
     color:azure;
 }
 
+.cta {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .btns {
     display: flex;
     justify-content: space-between;
     width: 15rem;
     margin-bottom: .2rem;
+}
+
+.btns button {
+    height: 1.5rem;
 }
 
 .imgs {
