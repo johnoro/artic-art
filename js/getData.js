@@ -1,6 +1,6 @@
 const apiUrl = 'https://api.artic.edu/api/v1/';
-const apiLimit = 1000;
-let iiifUrl = '';
+const apiLimit = 1000; // not arbitrary
+let iiifUrl = ''; // subject to change, hence why it's dynamically grabbed
 const endpoints = {
 	artworks: {
 		search: '/search?query[term][is_public_domain]=true',
@@ -74,6 +74,7 @@ export async function getArtwork() {
 
 // grabs exhibition at random-ish,
 // then grabs the specific exhibition data in order to get the image id(s)
+// then grabs any relevant URL links
 export async function getExhibition() {
 	const endpoint = 'exhibitions';
 	const {
