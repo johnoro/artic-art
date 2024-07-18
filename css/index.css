@@ -38,5 +38,6 @@ body {
     min-height: 15rem;
     max-width: 50rem;
     max-height: 50rem;
+    object-fit: cover;
     border: .1rem solid;
 }
