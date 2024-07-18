@@ -40,4 +40,5 @@ body {
     max-height: 50rem;
     object-fit: cover;
     border: .1rem solid;
+    cursor: move;
 }
