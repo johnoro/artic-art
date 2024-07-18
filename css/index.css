@@ -34,6 +34,8 @@ body {
 
 .imgs img {
     margin-top: 1rem;
+    min-width: 15rem;
+    min-height: 15rem;
     max-width: 50rem;
     max-height: 50rem;
     border: .1rem solid;
