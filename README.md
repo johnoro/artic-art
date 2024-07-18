@@ -12,6 +12,8 @@ The [getData.js](https://github.com/johnoro/artic-art/blob/main/js/getData.js) f
 
 The `getExhibition` function in particular takes quite a few extra steps to get it functional in a similar way to `getArtwork`. I wanted to make it able to grab multiple images for an exhibition if they were available, although that is not common. A majority only have one picture, while a few only have text data.
 
+The images can also be dragged on top of one another to re-sort them. This is just for the sake of messing around with the viewport without having to generate new images.
+
 ## Credits
 
 Art Institute of Chicago's API is used; see: [https://api.artic.edu/docs/](https://api.artic.edu/docs/)
