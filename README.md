@@ -4,7 +4,7 @@ A small site to demonstrate the usage of basic HTML, CSS, and JS along with an A
 
 ## Access
 
-This site is live at [https://johnoro.github.io/artic-art/](https://johnoro.github.io/artic-art/)
+This site is live at: [https://johnoro.github.io/artic-art/](https://johnoro.github.io/artic-art/)
 
 ## Technical details
 
